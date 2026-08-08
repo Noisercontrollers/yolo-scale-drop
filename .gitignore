@@ -1,0 +1,33 @@
+# --- Ultralytics / PyTorch artifacts ---
+*.pt
+*.pth
+*.onnx
+*.engine
+runs/
+weights/
+datasets/
+
+# --- datasets / large local files ---
+coco/
+VOC/
+VisDrone/
+*.zip
+
+# --- Python ---
+__pycache__/
+*.pyc
+.idea/
+.vscode/
+*.egg-info/
+
+# --- LaTeX aux (regenerable) ---
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.bbl
+paper/*.blg
+paper/*.spl
+
+# --- OS ---
+Thumbs.db
+.DS_Store

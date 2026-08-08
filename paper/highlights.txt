@@ -1,0 +1,8 @@
+Highlights
+(3-5 bullet points, each max 85 characters including spaces)
+
+- Scale redundancy is data-dependent: drop P3 on VOC, P5 on VisDrone, zero training.
+- A three-point ln-s trend (not a law) reverses the P3/P5 ranking near 12.6%.
+- Zero-training P5-drop: identical mAP, -10.4% FLOPs, -28.6% params, 6% faster.
+- On dense small-object data, scale drop beats resolution scaling (0.173 vs 0.145).
+- Cell-level redundancy is a mask-level oracle: block-skipping does not speed up GPU.

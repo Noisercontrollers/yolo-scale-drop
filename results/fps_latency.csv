@@ -1,0 +1,17 @@
+model,fp16,batch,imgsz,fps,ms
+voc_full,False,32,640,574.8,55.67
+voc_full,False,1,640,90.9,11.0
+voc_full,True,32,640,575.5,55.6
+voc_full,True,1,640,93.5,10.7
+voc_p3drop,False,32,640,698.0,45.85
+voc_p3drop,False,1,640,104.8,9.54
+voc_p3drop,True,32,640,695.8,45.99
+voc_p3drop,True,1,640,105.8,9.46
+vd_full,False,32,640,562.4,56.9
+vd_full,False,1,640,88.4,11.31
+vd_full,True,32,640,615.8,51.97
+vd_full,True,1,640,84.5,11.83
+vd_p5drop,False,32,640,597.5,53.55
+vd_p5drop,False,1,640,102.4,9.77
+vd_p5drop,True,32,640,594.9,53.79
+vd_p5drop,True,1,640,112.5,8.89
