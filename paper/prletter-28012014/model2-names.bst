@@ -817,6 +817,10 @@ FUNCTION {format.vol.num.pages}
       "volume" bibinfo.check
     }
   if$
+  number empty$
+    'skip$
+    { " (" number * ")" * * }
+  if$
 }
 
 FUNCTION {format.chapter.pages}
