@@ -145,11 +145,11 @@ Real-time detectors run at full capacity on every image, yet where their computa
 
 % Research highlights
 \begin{highlights}
-\item Scale redundancy is data-dependent: drop P3 on VOC, P5 on VisDrone, zero training.
-\item A three-point ln-s trend (not a law) reverses the P3/P5 ranking near 12.6\%.
-\item Zero-training P5-drop: identical mAP, -10.4\% FLOPs, -28.6\% params, 6\% faster.
-\item On dense small-object data, scale drop beats resolution scaling (0.173 vs 0.145).
-\item Cell-level redundancy is a mask-level oracle: block-skipping does not speed up GPU.
+\item We analyze per-scale redundancy on VOC/COCO/VisDrone: it is dataset-dependent.
+\item We identify a three-point ln-s trend reversing the P3/P5 ranking near 12.6\%.
+\item We introduce a zero-training scale drop: -10.4\% FLOPs, -28.6\% params, same mAP.
+\item We beat input-resolution scaling on dense small-object data (0.173 vs 0.145).
+\item We show cell redundancy is only a mask-level oracle; block-skip doesn't speed up GPU.
 \end{highlights}
 
 
