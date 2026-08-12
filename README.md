@@ -12,11 +12,21 @@ An empirical study of when a feature-pyramid scale in a YOLO detector is redunda
 
 Also reports negative results: backbone early exit is infeasible, and fine-tuning a dropped scale can hurt.
 
+## Paper
+
+- `paper/main_cas_dc.pdf` — **PRL submission version** (Elsevier CAS double-column template, 4 pages)
+- `paper/main_cas_dc.tex`, `paper/refs.bib` — LaTeX source; `cas-dc.cls`, `cas-common.sty`, `thumbnails/` included for recompiling (pdflatex → bibtex → pdflatex ×2)
+- `paper/main_prl_3p.pdf` — earlier elsarticle 3p layout (kept for reference)
+- `paper/supplementary_material.md` — appendices A–K (full budget curves, YOLO26s/26m, training config, ...)
+- `paper/highlights.txt` — 5 highlights (each ≤85 characters)
+- `paper/patrec-authorship-formatting-FILLED.pdf` — completed PRL Authorship Confirmation form
+- `paper/Response_to_Technical_Check.pdf` — response to the journal's technical check
+
 ## Repository layout
 
 ```
 yolo-scale-drop/
-├── paper/                 # PRL manuscript (main_prl_3p.tex/.pdf), refs.bib, supplementary material, highlights
+├── paper/                 # PRL submission: main_cas_dc.tex/.pdf (CAS double-column), refs.bib, forms, highlights
 ├── tools/                 # experiment scripts (contribution analysis, spatial-budget gate/skip, scale-drop, ...)
 ├── configs/               # custom YOLO YAMLs (p34 = P3/P4-only variant, p5drop-visdrone, visdrone, coco_local)
 ├── results/               # key measured CSVs (FPS/latency, resolution baselines, YOLO11n cross-check, ...)
