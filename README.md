@@ -14,7 +14,7 @@ Also reports negative results: backbone early exit is infeasible, and fine-tunin
 
 ## Paper
 
-- `paper/main_cas_dc.pdf` — **PRL submission version** (Elsevier CAS double-column template, 4 pages)
+- `paper/main_cas_dc.pdf` — **PRL submission version** (Elsevier CAS double-column template, 6 pages)
 - `paper/main_cas_dc.tex`, `paper/refs.bib` — LaTeX source; `cas-dc.cls`, `cas-common.sty`, `thumbnails/` included for recompiling (pdflatex → bibtex → pdflatex ×2)
 - `paper/main_prl_3p.pdf` — earlier elsarticle 3p layout (kept for reference)
 - `paper/supplementary_material.md` — appendices A–K (full budget curves, YOLO26s/26m, training config, ...)
