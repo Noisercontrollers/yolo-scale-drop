@@ -93,11 +93,11 @@ where $s_{i,c}$ denotes the classification score output by the teacher's detect 
 
 \subsection{Zero-training scale drop}
 
-\begin{figure}[h]\centering
-\includegraphics[width=0.58\linewidth]{figures/scale_drop_diagram.png}
+\begin{figure*}[h]\centering
+\includegraphics[width=\textwidth]{figures/scale_drop_diagram.png}
 \caption{What is dropped. P3-drop removes only the P3 branch of the detect head; P5-drop additionally removes the P5 neck branch (conv + upsampling), which is why it saves far more parameters and FLOPs.}
 \label{fig:scaledrop}
-\end{figure}
+\end{figure*}
 
 Unlike conventional channel pruning, which finds important channels through retraining or search~\cite{yan2023mccp,han2015pruning}, our scale drop needs no optimization: if a scale is redundant ($\Delta\text{AP}\approx0$), it is removed and the remaining weights are transferred exactly, because removing the redundant tail branch does not change the input channels of the kept head scales. In practice we treat a scale as redundant when removal costs no more than $\approx$1\,pp of mAP50-95: P5 on VisDrone costs $\approx$0 (unambiguous), while P3 on VOC costs 1.0\,pp (0.010), a borderline case near the evaluation noise measured in Sec.~4.1. Scales costing more than 5\,pp (P5 on VOC, 0.417; P3 on VisDrone, 0.101) are clearly necessary. The 1\,pp threshold is a rule of thumb to be calibrated to the user's accuracy budget, not a certified bound.
 
@@ -123,11 +123,11 @@ VisDrone & 85.9\% & \textbf{53\%} & 7\% & \textbf{0.101} & $-0.0001$\\
 \end{table}
 Fitting the three datasets (Fig.~\ref{fig:size}) gives $G_{\mathrm{P3}}(s)=0.494+0.094\ln s$ and $G_{\mathrm{P5}}(s)=0.096-0.098\ln s$ ($R^2=0.81/0.87$), crossing at $s^*\approx12.6\%$; the mAP cost follows $\Delta\text{AP}_{\mathrm{P3}}\approx0.10\,s^{0.73}$. With only three points these are trend descriptions, not laws: per-point residuals are 3.3/8.3/5.0\,pp for $G_{\mathrm{P3}}$ and 2.6/6.7/4.1\,pp for $G_{\mathrm{P5}}$ (VOC/COCO/VisDrone), and the crossover lies between the observed points at 3.8\% and 24.8\%, so 12.6\% is an interpolation within our range, not an observed phenomenon. The ranking (P3 least, P5 most important) also holds for YOLO26s/26m on COCO (supplementary material) and for YOLO11n on COCO ($\Delta$AP 0.017/0.052/0.186 for P3/P4/P5), so it is not a nano- or architecture-specific artifact.
 
-\begin{figure}[h]\centering
-\includegraphics[width=0.41\linewidth]{figures/size_redundancy.png}
+\begin{figure*}[h]\centering
+\includegraphics[width=\textwidth]{figures/size_redundancy.pdf}
 \caption{Gradient contribution (a) and mAP cost of scale removal (b) versus small-object fraction; the P3/P5 ranking reverses in our three-point trend.}
 \label{fig:size}
-\end{figure}
+\end{figure*}
 
 \subsection{RQ2: cell-level redundancy is a mask-level oracle}
 Cell occupancy (cells containing object centers) is 0.05/0.19/0.74\% (VOC) and 1.02/3.52/10.56\% (VisDrone) for P3/P4/P5, yet an oracle that keeps the top-5\% cells by head score retains essentially all mAP on both datasets (Table~\ref{tab:budget}). This is a mask-level analysis: it suppresses scores without saving compute.
