@@ -14,6 +14,8 @@ Also reports negative results: backbone early exit is infeasible, and fine-tunin
 
 ## Paper
 
+> The manuscript and submission files are **not** published here. They are kept in the private repository `yolo-scale-drop-paper` (available to the authors until publication).
+
 - `paper/main_cas_dc.pdf` — **PRL submission version** (Elsevier CAS double-column template, 6 pages)
 - `paper/main_cas_dc.tex`, `paper/refs.bib` — LaTeX source; `cas-dc.cls`, `cas-common.sty`, `thumbnails/` included for recompiling (pdflatex → bibtex → pdflatex ×2)
 - `paper/main_prl_3p.pdf` — earlier elsarticle 3p layout (kept for reference)
@@ -26,7 +28,7 @@ Also reports negative results: backbone early exit is infeasible, and fine-tunin
 
 ```
 yolo-scale-drop/
-├── paper/                 # PRL submission: main_cas_dc.tex/.pdf (CAS double-column), refs.bib, forms, highlights
+├── paper/                 # (private) PRL submission files — kept in private repo yolo-scale-drop-paper
 ├── tools/                 # experiment scripts (contribution analysis, spatial-budget gate/skip, scale-drop, ...)
 ├── configs/               # custom YOLO YAMLs (p34 = P3/P4-only variant, p5drop-visdrone, visdrone, coco_local)
 ├── results/               # key measured CSVs (FPS/latency, resolution baselines, YOLO11n cross-check, ...)

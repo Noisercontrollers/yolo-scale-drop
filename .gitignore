@@ -31,3 +31,6 @@ paper/*.spl
 # --- OS ---
 Thumbs.db
 .DS_Store
+
+# --- paper (kept in private repo yolo-scale-drop-paper) ---
+paper/

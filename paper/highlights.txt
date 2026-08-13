@@ -1,8 +1,0 @@
-Highlights
-(3-5 bullet points, each max 85 characters including spaces)
-
-- We analyze per-scale redundancy on VOC/COCO/VisDrone: it is dataset-dependent.
-- We identify a three-point ln-s trend reversing the P3/P5 ranking near 12.6%.
-- We introduce a zero-training scale drop: -10.4% FLOPs, -28.6% params, same mAP.
-- We beat input-resolution scaling on dense small-object data (0.173 vs 0.145).
-- We show cell redundancy is only a mask-level oracle; block-skip doesn't speed up GPU.
