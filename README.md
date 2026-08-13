@@ -1,6 +1,6 @@
 # YOLO Scale Drop
 
-**When Is a Scale Redundant? Data-Dependent Scale Redundancy and Zero-Training Pruning for Real-Time Object Detection** (Pattern Recognition Letters, under review)
+**When Is a Scale Redundant? Data-Dependent Scale Redundancy and Zero-Training Pruning for Real-Time Object Detection** 
 
 An empirical study of when a feature-pyramid scale in a YOLO detector is redundant, why it depends on the data, and how it can be removed with **zero training**.
 
